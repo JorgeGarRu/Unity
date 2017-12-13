@@ -6,7 +6,11 @@ using UnityEngine.AI;
 public class SeguirBolas : MonoBehaviour {
 
     NavMeshAgent agent;
-
+    
+    public Marcador marcadorRojo;
+    public Marcador marcadorVerde;
+    public Marcador marcadorAzul;
+    public Marcador marcadorAmarillo;
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
 	}
@@ -45,5 +49,32 @@ public class SeguirBolas : MonoBehaviour {
     private void OnTriggerEnter(Collider other) // solo afectara el trigguer cuando uno de los dos elementos que choquen, tenga un rigidbody...
     {
         Destroy(other.gameObject); //destruimos las bolas cuando el jugador llegue a ellas.
+
+        GameObject b = other.gameObject;
+        Renderer r = b.GetComponent<Renderer>();
+        if(r.material.color == Color.red)
+        {
+
+            marcadorRojo.añadirPuntuacion();
+
+        } else if (r.material.color == Color.blue)
+
+        {
+
+            marcadorAzul.añadirPuntuacion();
+
+        } else if (r.material.color == Color.green)
+        {
+
+            marcadorVerde.añadirPuntuacion();
+
+        } else
+
+        {
+
+            marcadorAmarillo.añadirPuntuacion();
+
+        }
+        
     }
 }

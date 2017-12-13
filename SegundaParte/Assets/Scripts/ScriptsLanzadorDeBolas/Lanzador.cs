@@ -10,17 +10,18 @@ public class Lanzador : MonoBehaviour {
     public float longitud = 500f;
     public Vector3 direccion;
     public float fuerzaLanzamiento;
-  
-
+    Renderer rend;
+    Color[] colores = new Color[] { Color.red, Color.blue, Color.green, Color.yellow };
 
 
 
     void Start () {
-       
+        
     }
 	
 	
 	void FixedUpdate () {
+        
         if (Input.GetMouseButtonDown(0)) //si pulso el boton izquierdo del mouse...
         {
 
@@ -33,8 +34,12 @@ public class Lanzador : MonoBehaviour {
 
                 Vector3 pointHit = hit.point; //cogemos el punto donde choca el raycast
                 GameObject bola1 = (GameObject) Instantiate(bola, transform.position, transform.rotation);//"Quaternion.identity" es la rotacion por defecto
-                //target = bola1.transform;
+                rend = bola1.GetComponent<Renderer>();
+                rend.material.color = colores[Random.Range(0,colores.Length)];
                 
+               
+
+
 
 
                 Rigidbody myRigidbody = bola1.GetComponent<Rigidbody>();
