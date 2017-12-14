@@ -49,15 +49,15 @@ public class CMovement : MonoBehaviour {
         controller.Move(moveDirection * Time.deltaTime);
 
         //disparar
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Instantiate(bala, spawn.transform.position,spawn.rotation);
-        //    Disparo disparo = bala.GetComponent<Disparo>(); //accedemos al script DisparoNave
-        //    disparo.disparar = false;//y ponemos la variable "disparar" en false para que la bala salga con la fuerza necesaria descrita
-        //}
-            
-        
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(bala, spawn.transform.position, spawn.rotation);
+            Disparo disparo = bala.GetComponent<Disparo>(); //accedemos al script DisparoNave
+            disparo.disparar = false;//y ponemos la variable "disparar" en false para que la bala salga con la fuerza necesaria descrita
+        }
+
+
+
     }
 
     
