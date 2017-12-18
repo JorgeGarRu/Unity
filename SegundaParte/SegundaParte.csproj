@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\FuerzaDisparo.cs" />
     <Compile Include="Assets\Scripts\LolTest.cs" />
     <Compile Include="Assets\Scripts\MoveTo.cs" />
+    <Compile Include="Assets\Scripts\Particulas\ParticulasController.cs" />
     <Compile Include="Assets\Scripts\RaycastTest.cs" />
     <Compile Include="Assets\Scripts\RotacionManu.cs" />
     <Compile Include="Assets\Scripts\ScriptsLanzadorDeBolas\Lanzador.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\Scripts\ScriptsLanzadorDeBolas\Marcador.cs" />
     <Compile Include="Assets\Scripts\ScriptsLanzadorDeBolas\SeguirBolas.cs" />
     <Compile Include="Assets\Scripts\ScriptsLanzadorDeBolas\ZonaMuerta.cs" />
+    <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -8470,7 +8470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52847421f5f921945bbf4fc7265f8cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1431277546}
 --- !u!136 &2035185567
 CapsuleCollider:
   m_ObjectHideFlags: 0
